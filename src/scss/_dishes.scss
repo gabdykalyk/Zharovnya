@@ -60,6 +60,11 @@
 
     .arrowUp {
         margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    .arrowDown {
+        cursor: pointer;
     }
 
     .dishes__info {
@@ -123,6 +128,12 @@
             width: 320px;
             height: 70px;
             margin-top: 20px;
+            cursor: pointer;
+            transition: background .2s linear;
+
+            &:hover {
+                background-color: rgba(255, 122, 0, .7);
+            }
 
             .dishes__basket {
                 margin-left: 20px;

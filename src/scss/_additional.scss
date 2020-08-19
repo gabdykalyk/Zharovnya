@@ -42,6 +42,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
 
     &__quantity {
@@ -87,6 +88,12 @@
         color: #ffffff;
         width: 176px;
         padding: 13px;
+        cursor: pointer;
+        transition: background .2s linear;
+
+        &:hover{
+            background: rgba(255, 122, 0, .7);
+        }
     }
 
     &__like {
@@ -97,5 +104,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+    }
+
+    &__icon {
+        margin-right: 21px;
+    }
+
+    &__plus,
+    &__minus {
+        cursor: pointer;
     }
 }

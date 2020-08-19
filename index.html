@@ -73,7 +73,7 @@
                         <img class="dishes__images" src="./src/images/dishes/2.jpg" alt="">
                         <img class="dishes__images" src="./src/images/dishes/3.jpg" alt="">
                     </div>
-                    <img src="./src/images/dishes/arrowDown.svg" alt="">
+                    <img class="arrowDown" src="./src/images/dishes/arrowDown.svg" alt="">
                 </div>
                 <div class="dishes__main">
                     <img src="./src/images/dishes/main.jpg" alt="">
@@ -152,13 +152,13 @@
                         </div>
                         <div class="additional__price">
                             <div class="additional__quantity">
-                                <div class="additional__plus">
+                                <div @click="decreasFirst" class="additional__plus">
                                     &mdash;
                                 </div>
                                 <div class="additional__number">
-                                    1
+                                    {{ firstDish }}
                                 </div>
-                                <div class="additional__minus">
+                                <div @click="increaseFirst" class="additional__minus">
                                     +
                                 </div>
                             </div>
@@ -166,7 +166,7 @@
                         </div>
                         <div class="additional__add">
                             <div class="additional__basket">
-                                <img src="./src/images/additional/basket.svg" alt="">
+                                <img class="additional__icon" src="./src/images/additional/basket.svg" alt="">
                                 В корзину
                             </div>
                             <div class="additional__like">
@@ -191,13 +191,13 @@
                         </div>
                         <div class="additional__price">
                             <div class="additional__quantity">
-                                <div class="additional__plus">
+                                <div @click="decreasSecond" class="additional__plus">
                                     &mdash;
                                 </div>
                                 <div class="additional__number">
-                                    1
+                                    {{ secondDish }}
                                 </div>
-                                <div class="additional__minus">
+                                <div @click="increaseSecond" class="additional__minus">
                                     +
                                 </div>
                             </div>
@@ -205,7 +205,7 @@
                         </div>
                         <div class="additional__add">
                             <div class="additional__basket">
-                                <img src="./src/images/additional/basket.svg" alt="">
+                                <img class="additional__icon" src="./src/images/additional/basket.svg" alt="">
                                 В корзину
                             </div>
                             <div class="additional__like">
@@ -230,13 +230,13 @@
                         </div>
                         <div class="additional__price">
                             <div class="additional__quantity">
-                                <div class="additional__plus">
+                                <div @click="decreasThird" class="additional__plus">
                                     &mdash;
                                 </div>
                                 <div class="additional__number">
-                                    1
+                                    {{ thirdDish }}
                                 </div>
-                                <div class="additional__minus">
+                                <div @click="increaseThird" class="additional__minus">
                                     +
                                 </div>
                             </div>
@@ -244,7 +244,7 @@
                         </div>
                         <div class="additional__add">
                             <div class="additional__basket">
-                                <img src="./src/images/additional/basket.svg" alt="">
+                                <img class="additional__icon" src="./src/images/additional/basket.svg" alt="">
                                 В корзину
                             </div>
                             <div class="additional__like">
@@ -269,13 +269,13 @@
                         </div>
                         <div class="additional__price">
                             <div class="additional__quantity">
-                                <div class="additional__plus">
+                                <div @click="decreasFourth" class="additional__plus">
                                     &mdash;
                                 </div>
                                 <div class="additional__number">
-                                    1
+                                    {{ fourthDish }}
                                 </div>
-                                <div class="additional__minus">
+                                <div @click="increaseFourth" class="additional__minus">
                                     +
                                 </div>
                             </div>
@@ -283,7 +283,7 @@
                         </div>
                         <div class="additional__add">
                             <div class="additional__basket">
-                                <img src="./src/images/additional/basket.svg" alt="">
+                                <img class="additional__icon" src="./src/images/additional/basket.svg" alt="">
                                 В корзину
                             </div>
                             <div class="additional__like">

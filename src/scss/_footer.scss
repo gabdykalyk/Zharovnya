@@ -50,6 +50,12 @@
             border: none;
             outline: none;
             margin-top: 39px;
+            cursor: pointer;
+            transition: background .2s linear;
+
+            &:hover {
+                background-color: rgba(254, 123, 1, .7);
+            }
         }
 
         &__rights {
