@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/scss/hamburger.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+</head>
+<body>
+    <div id="app">
+    <div class="header">
+        <div class="container">
+            <div class="menu">
+                <div class="menu__left">
+                    <button @click="myFilter"
+                            :class="{isActive: isActive}"
+                    class="hamburger hamburger--collapse" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                    <div class="user">
+                        <a href="#">
+                            <img src="./src/images/header/account.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="menu__logo">
+                    <a href="#">
+                        <img src="./src/images/header/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="menu__right">
+                    <a href="#">
+                        <img class="menu__icon" src="./src/images/header/search.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img class="menu__icon" src="./src/images/header/heart.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <div class="menu__basket">
+                            <img src="./src/images/header/basket.svg" alt="">
+                            <div class="menu__count">
+                                1
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dishes">
+        <div class="container">
+            <div class="dishes__title">
+                <a href="#">
+                    <span class="golden">Главная</span>
+                </a> - 
+                <a href="#">
+                    <span class="golden">Блюда</span>
+                </a> - 
+                <a href="#">
+                Шашлык из баранины
+                </a>
+            </div>
+            <div class="dishes__menu">
+                <div class="dishes__side">
+                    <img class="arrowUp" src="./src/images/dishes/arrowUp.svg" alt="">
+                    <div class="dishes__images--left">
+                        <img class="dishes__images" src="./src/images/dishes/1.jpg" alt="">
+                        <img class="dishes__images" src="./src/images/dishes/2.jpg" alt="">
+                        <img class="dishes__images" src="./src/images/dishes/3.jpg" alt="">
+                    </div>
+                    <img src="./src/images/dishes/arrowDown.svg" alt="">
+                </div>
+                <div class="dishes__main">
+                    <img src="./src/images/dishes/main.jpg" alt="">
+                    <div class="dishes__order">
+                        <img class="dishes__circle" src="./src/images/dishes/round.svg" alt="">
+                        <img class="dishes__circle" src="./src/images/dishes/choosen.svg" alt="">
+                        <img class="dishes__circle" src="./src/images/dishes/round.svg" alt="">
+                        <img class="dishes__circle" src="./src/images/dishes/round.svg" alt="">
+                    </div>
+                </div>
+                <div class="dishes__info">
+                    <div class="info__title">
+                        Шашлык <br>
+                        из баранины
+                    </div>
+                    <div class="dishes__description">
+                        курица копченая, ананас, помидор, <br>
+                        сыр, майонез, чеснок
+                    </div>
+                    <div class="dishes__price">
+                        <p>{{ price }} &#8376</p>
+                        <div class="dishes__like">
+                            <img src="./src/images/dishes/like.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="dishes__quantity">
+                        <div @click="decreas" class="dishes__plus">
+                            -
+                        </div>
+                        <div class="dishes__number">
+                            {{ count }}
+                        </div>
+                        <div @click="increase"  class="dishes__minus">
+                            +
+                        </div>
+                    </div>
+                    <div class="dishes__apply">
+                        <img class="dishes__basket" src="./src/images/dishes/basket.svg" alt="">
+                        Добавить в корзину
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pepper">
+            <img src="./src/images/dishes/pepper.png" alt="">
+        </div>
+        <div class="bottomLeft">
+            <img src="./src/images/dishes/onion.png" alt="">
+            <img class="steak" src="./src/images/dishes/steak.png" alt="">
+        </div>
+        <div class="bottomRight">
+            <img src="./src/images/dishes/meteor.png" alt="">
+            <img class="potato" src="./src/images/dishes/potato.png" alt="">
+        </div>
+    </div>
+    <div class="additional">
+        <div class="container">
+            <div class="additional__title">
+                С этим блюдом заказывают
+            </div>
+            <div class="additional__menu">
+                <div class="additional__item">
+                    <img src="./src/images/additional/item.jpg" alt="">
+                    <div class="additional__info">
+                        <div class="additional__name">
+                            Салат Гавайский <br>
+                            в 2 ряда
+                            <div class="additional__more">
+                                <img src="./src/images/additional/info.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="additional__text">
+                            курица копченая, ананас <br>
+                            помидор, сыр, майонез
+                        </div>
+                        <div class="additional__price">
+                            <div class="additional__quantity">
+                                <div class="additional__plus">
+                                    &mdash;
+                                </div>
+                                <div class="additional__number">
+                                    1
+                                </div>
+                                <div class="additional__minus">
+                                    +
+                                </div>
+                            </div>
+                            <p class="additional__number">1000 &#8376 / 900 г.</p>
+                        </div>
+                        <div class="additional__add">
+                            <div class="additional__basket">
+                                <img src="./src/images/additional/basket.svg" alt="">
+                                В корзину
+                            </div>
+                            <div class="additional__like">
+                                <img src="./src/images/additional/like.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="additional__item">
+                    <img src="./src/images/additional/item.jpg" alt="">
+                    <div class="additional__info">
+                        <div class="additional__name">
+                            Салат Гавайский <br>
+                            в 2 ряда
+                            <div class="additional__more">
+                                <img src="./src/images/additional/info.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="additional__text">
+                            курица копченая, ананас <br>
+                            помидор, сыр, майонез
+                        </div>
+                        <div class="additional__price">
+                            <div class="additional__quantity">
+                                <div class="additional__plus">
+                                    &mdash;
+                                </div>
+                                <div class="additional__number">
+                                    1
+                                </div>
+                                <div class="additional__minus">
+                                    +
+                                </div>
+                            </div>
+                            <p class="additional__number">1000 &#8376 / 900 г.</p>
+                        </div>
+                        <div class="additional__add">
+                            <div class="additional__basket">
+                                <img src="./src/images/additional/basket.svg" alt="">
+                                В корзину
+                            </div>
+                            <div class="additional__like">
+                                <img src="./src/images/additional/like.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="additional__item">
+                    <img src="./src/images/additional/item.jpg" alt="">
+                    <div class="additional__info">
+                        <div class="additional__name">
+                            Салат Гавайский <br>
+                            в 2 ряда
+                            <div class="additional__more">
+                                <img src="./src/images/additional/info.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="additional__text">
+                            курица копченая, ананас <br>
+                            помидор, сыр, майонез
+                        </div>
+                        <div class="additional__price">
+                            <div class="additional__quantity">
+                                <div class="additional__plus">
+                                    &mdash;
+                                </div>
+                                <div class="additional__number">
+                                    1
+                                </div>
+                                <div class="additional__minus">
+                                    +
+                                </div>
+                            </div>
+                            <p class="additional__number">1000 &#8376 / 900 г.</p>
+                        </div>
+                        <div class="additional__add">
+                            <div class="additional__basket">
+                                <img src="./src/images/additional/basket.svg" alt="">
+                                В корзину
+                            </div>
+                            <div class="additional__like">
+                                <img src="./src/images/additional/like.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="additional__item">
+                    <img src="./src/images/additional/item.jpg" alt="">
+                    <div class="additional__info">
+                        <div class="additional__name">
+                            Салат Гавайский <br>
+                            в 2 ряда
+                            <div class="additional__more">
+                                <img src="./src/images/additional/info.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="additional__text">
+                            курица копченая, ананас <br>
+                            помидор, сыр, майонез
+                        </div>
+                        <div class="additional__price">
+                            <div class="additional__quantity">
+                                <div class="additional__plus">
+                                    &mdash;
+                                </div>
+                                <div class="additional__number">
+                                    1
+                                </div>
+                                <div class="additional__minus">
+                                    +
+                                </div>
+                            </div>
+                            <p class="additional__number">1000 &#8376 / 900 г.</p>
+                        </div>
+                        <div class="additional__add">
+                            <div class="additional__basket">
+                                <img src="./src/images/additional/basket.svg" alt="">
+                                В корзину
+                            </div>
+                            <div class="additional__like">
+                                <img src="./src/images/additional/like.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="map">
+            
+        </div>
+        <div class="contact">
+            <div class="contact__title">
+                Контакты
+            </div>
+            <div class="contact__main">
+                <div class="contact__item">
+                    <img src="./src/images/footer/phone.svg" alt="">
+                    <div class="contact__text">
+                        <div class="contact__upper">
+                            Контакты:
+                        </div>
+                        <div class="contact__downer">
+                            +7(7212)38-09-09
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__item">
+                    <img src="./src/images/footer/whatsaap.svg" alt="">
+                    <div class="contact__text">
+                        <div class="contact__upper">
+                            whatsaap:
+                        </div>
+                        <div class="contact__downer">
+                            +7-775-000-04-44
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__item">
+                    <img src="./src/images/footer/mail.svg" alt="">
+                    <div class="contact__text">
+                        <div class="contact__upper">
+                            Пишите нам:
+                        </div>
+                        <div class="contact__downer">
+                            restaurant_zharovnya@mail.ru
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__item">
+                    <img src="./src/images/footer/map.svg" alt="">
+                    <div class="contact__text">
+                        <div class="contact__upper">
+                            Мы находимся
+                        </div>
+                        <div class="contact__downer">
+                            г. Караганда, ул. Сабыра Рахимова 138/2 <br>
+                            (бывш Луговая)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="contact__btn">Обратная связь</button>
+            <div class="contact__rights">
+                © Жаровня, 2020. Все права защищены.
+            </div>
+            <div class="contact__mark">
+                <img src="./src/images/footer/marker.png" alt="">
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./src/script/main.js"></script>
+</body>
+</html>

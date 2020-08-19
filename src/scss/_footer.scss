@@ -1,0 +1,66 @@
+.footer {
+    display: flex;
+
+    .map {
+        width: 50%;
+        background-image: url('../images/footer/map.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .contact {
+        background-image: url('../images/footer/1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 50%;
+        padding: 40px 87px;
+        position: relative;
+
+        &__main {
+            margin-top: 28px;
+        }
+
+        &__title {
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+        &__item {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        &__text {
+            margin-left: 16px;
+        }
+
+        &__upper {
+            font-size: 14px;
+        }
+
+        &__downer {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        &__btn {
+            background-color: #FE7B01;
+            color: #ffffff;
+            padding: 11px 54px;
+            border: none;
+            outline: none;
+            margin-top: 39px;
+        }
+
+        &__rights {
+            margin-top: 41px;
+            font-size: 14px;
+        }
+
+        &__mark {
+            position: absolute;
+            right: 0;
+            top: 10%;
+        }
+    }
+}

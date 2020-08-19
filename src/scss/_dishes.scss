@@ -1,0 +1,163 @@
+.dishes {
+    background-image: url('../images/dishes/banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding-top: 25px;
+    padding-bottom: 84px;
+    position: relative;
+
+    &__plus,
+    &__minus {
+        cursor: pointer;
+    }
+
+    .golden {
+        color: #C7BA9C;;
+    }
+
+    &__title {
+        border: 1px solid #FFFFFF;
+        border-radius: 6px;
+        border-radius: 6px;
+        display: inline-block;
+        padding: 9px 19px;
+    }
+
+    &__menu {
+        display: flex;
+        margin-top: 35px;
+    }
+
+    &__side {
+        display: flex;
+        flex-direction: column;
+        margin-right: 45px;
+    }
+
+    &__images {
+        margin-bottom: 20px;
+    }
+
+    &__images--left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__main {
+        margin-right: 20px;
+
+        .dishes__order {
+            display: flex;
+            justify-content: center;
+            margin-top: 31px;
+        }
+
+        .dishes__circle:not(:last-child) {
+            margin-right: 23px;
+        }
+    }
+
+    .arrowUp {
+        margin-bottom: 20px;
+    }
+
+    .dishes__info {
+        background-color: #ffffff;
+        padding: 30px;
+        height: 100%;
+        border-radius: 6px;
+
+        .info__title {
+            font-size: 30px;
+            line-height: 120%;
+            font-weight: 700;
+            color: #0E1017;
+        }
+
+        .dishes__description {
+            color: #B9BBC0;
+            margin-top: 20px;
+            line-height: 187%;
+        }
+
+        .dishes__price {
+            color: #0E1017;
+            font-weight: 600;
+            font-size: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 70px;
+        }
+
+        .dishes__like {
+            border: 1px solid #E3E4E8;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+        }
+
+        .dishes__quantity {
+            color: #0E1017;
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: 500;
+            border: 1px solid #E3E4E8;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .dishes__apply {
+            background-color: #FF7A00;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 18px;
+            width: 320px;
+            height: 70px;
+            margin-top: 20px;
+
+            .dishes__basket {
+                margin-left: 20px;
+                margin-right: 40px;
+            }
+        }
+    }
+
+    .pepper {
+        position: absolute;
+        right: 0;
+        top: 22%;
+    }
+
+    .bottomLeft {
+        position: absolute;
+        left: 0;
+        bottom: -3%;
+
+        .steak {
+            position: absolute;
+            left: 0;
+            bottom: -19%;
+        }
+    }
+
+    .bottomRight {
+        position: absolute;
+        right: 3%;
+        bottom: 10%;
+
+        .potato {
+            position: absolute;
+            right: 50%;
+            top: 300%;
+        }
+    }
+}
